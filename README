@@ -7,3 +7,27 @@ following properties:
   2. Uses as much HTTP-level caching as possible.
   3. Leverages HTTP invalidation side-effects (e.g., POST clears cache) to make
      cache invalidation not suck so much.
+
+= Getting Squid3 To Work =
+
+Ho man. This is complicated.
+
+1. Install an ESI-enabled version of Squid3:
+
+  sudo apt-get build-deps squid3
+  apt-get source squid3
+  cd squid3*
+  nano debian/rules
+  <add --enable-esi to the list of config flags>
+  debuild -us -uc
+  cd ..
+  sudo dpkg -i *.deb
+
+2. Configure it:
+
+  sudo ln -s THIS_APP/config/squid3-development.conf /etc/squid3/squid.conf
+
+3. (Re)Start it:
+
+  sudo /etc/init.d/squid3 restart
+
