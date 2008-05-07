@@ -1,0 +1,8 @@
+= esi-blog =
+
+An experiment in leveraging Edge-Side Includes to build an application with the
+following properties:
+
+  1. Doesn't suck to develop.
+  2. Uses as much HTTP-level caching as possible.
+  3. 
