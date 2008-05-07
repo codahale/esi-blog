@@ -1,7 +1,7 @@
 module Esi::ControllerHelper
-  # Default options for Surrogate-Control headers.
+  # Default options for Surrogate-Control headers. Don't cache, just enable ESI.
   DEFAULT_ESI_OPTIONS = {
-    :ttl              => 30.minutes,
+    :ttl              => false,
     :stale_ttl        => false,
     :no_store         => false,
     :no_store_remote  => false,
@@ -35,7 +35,7 @@ module Esi::ControllerHelper
       esi_header << "no-store-remote" if options[:no_store_remote]
       esi_header << options[:content]
 
-      headers["Surrogate-Control"] = esi_header.join(", ")
+      headers["Surrogate-Control"] = esi_header.join(",")
     end
   end
   

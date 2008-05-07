@@ -1,5 +1,5 @@
 class TestController < ApplicationController
-  enable_esi :only => [:index], :stale_ttl => 1.year
+  enable_esi
   
   def index
     respond_to do |format|
