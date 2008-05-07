@@ -7,4 +7,6 @@ class ApplicationController < ActionController::Base
   # See ActionController::RequestForgeryProtection for details
   # Uncomment the :secret if you're not using the cookie session store
   protect_from_forgery # :secret => '5955530625e815e8c56a363c7135a46a'
+  
+  include Esi::ControllerHelper
 end
