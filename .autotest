@@ -1,0 +1,6 @@
+Autotest.add_hook :initialize do |at|
+  at.add_exception("^\\.git")
+  at.add_mapping(%r%^app/concerns/(.*)\.rb$%) { |_, m|
+    ["spec/concerns/#{m[1]}_spec.rb"]
+  }
+end
