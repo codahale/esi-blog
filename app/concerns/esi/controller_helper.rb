@@ -24,7 +24,7 @@ module Esi::ControllerHelper
       esi_header = []
 
       if ttl = options[:ttl]
-        maxage = "maxage=#{ttl.to_i}"
+        maxage = "max-age=#{ttl.to_i}"
         if stale_ttl = options[:stale_ttl]
           maxage << "+#{stale_ttl.to_i}"
         end
