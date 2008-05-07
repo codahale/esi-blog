@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + '/../../spec_helper'
 
 # TODO: figure out a good way to spec these out
-describe Esi::ControllerHelpers do
+describe Esi::ControllerHelper do
   
   it "should make all included methods protected"
   

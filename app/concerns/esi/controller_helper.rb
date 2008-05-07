@@ -1,4 +1,4 @@
-module Esi::ControllerHelpers
+module Esi::ControllerHelper
   # Default options for Surrogate-Control headers.
   DEFAULT_ESI_OPTIONS = {
     :ttl              => 30.minutes,
