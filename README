@@ -5,4 +5,5 @@ following properties:
 
   1. Doesn't suck to develop.
   2. Uses as much HTTP-level caching as possible.
-  3. 
+  3. Leverages HTTP invalidation side-effects (e.g., POST clears cache) to make
+     cache invalidation not suck so much.
