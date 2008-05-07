@@ -1,14 +1,23 @@
 development:
-  adapter: jdbcderby
-  database: db/development.db
+  adapter: jdbcpostgresql
+  host: localhost
+  username: esi_blog
+  password: esi_blog
+  database: esi_blog_dev
 
 # Warning: The database defined as 'test' will be erased and
 # re-generated from your development database when you run 'rake'.
 # Do not set this db to the same as development or production.
 test:
-  adapter: jdbcderby
-  database: db/test.db
+  adapter: jdbcpostgresql
+  host: localhost
+  username: esi_blog
+  password: esi_blog
+  database: esi_blog_test
 
 production:
-  adapter: jdbcderby
-  database: db/production.db
+  adapter: jdbcpostgresql
+  host: localhost
+  username: esi_blog
+  password: esi_blog
+  database: esi_blog_prod
